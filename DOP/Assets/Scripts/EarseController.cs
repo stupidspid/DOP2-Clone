@@ -1,17 +1,17 @@
 using UnityEngine;
 
 public class EarseController : MonoBehaviour, IEarsable
-{ 
-    [SerializeField] private LineRenderer lineRenderer;
+{
+    [SerializeField] private SpriteMask mask;
     
     public void Begin(Vector3 position)
     {
-        lineRenderer.positionCount++;
-        lineRenderer.SetPosition(lineRenderer.positionCount-1, position);
+        mask.enabled = true;
+        transform.position = position;
     }
 
     public void Stop()
     {
-        lineRenderer.positionCount = 0;
+        mask.enabled = false;
     }
 }

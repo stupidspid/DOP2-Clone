@@ -29,7 +29,6 @@ public class LevelsController : MonoBehaviour
         var currentLevel = levelsData.levels[currentLevelIndex].level;
         
         _currentLevel = Instantiate(currentLevel);
-        inputSystem.Scratch = currentLevel;
 
         levelCondition.text = levelsData.levels[currentLevelIndex].condition;
     }

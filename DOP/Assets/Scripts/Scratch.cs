@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Scratch : MonoBehaviour
 {
-    public SpriteMask spriteMask;
     public Camera spriteCam;
 
     private static Scratch _scratch;
@@ -36,12 +35,6 @@ public class Scratch : MonoBehaviour
         Destroy(renderTexture);
 
         Sprite sprite = Sprite.Create(texture, rect, new Vector2(0.5f,0.5f), Screen.height/10);
-
-        spriteMask.sprite = sprite;
     }
 
-    public void Stop()
-    {
-        spriteMask.sprite = null;
-    }
 }

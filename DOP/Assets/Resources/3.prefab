@@ -111,7 +111,7 @@ RectTransform:
   m_GameObject: {fileID: 5107110043475379388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5107110044416920754}
@@ -209,8 +209,8 @@ RectTransform:
   m_GameObject: {fileID: 5107110044207950763}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5107110044416920754}
   m_RootOrder: 2
@@ -414,7 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db95d2c764e7a1489f262721e5f2d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteMask: {fileID: 5107110044270570526}
   spriteCam: {fileID: 5107110044533777987}
 --- !u!1 &5107110044533778013
 GameObject:

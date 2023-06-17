@@ -1,20 +1,18 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
     [SerializeField] private EarseController earse;
-    [SerializeField] private Scratch scratch;
-    
+    [SerializeField] private int earsesAmount;
+    [SerializeField] private Transform container;
+
+    private List<EarseController> earses = new List<EarseController>();
     private Camera _camera;
     private EarseController _earse;
+    private int _currentEarseIndex;
 
-    public Scratch Scratch
-    {
-        get { return scratch; }
-        set { scratch = value; }
-    }
-
-    private void OnEnable()
+    private void Start()
     {
         _camera = Camera.main;
         Spawn();
@@ -22,7 +20,11 @@ public class InputController : MonoBehaviour
 
     public void Spawn()
     {
-        _earse = Instantiate(earse);
+        for (int i = 0; i < earsesAmount; i++)
+        {
+            var newEarse = Instantiate(earse, container);
+            earses.Add(newEarse);
+        }
     }
 
     private void Update()
@@ -31,13 +33,17 @@ public class InputController : MonoBehaviour
         {
             var spawnPosition = _camera.ScreenToWorldPoint(Input.mousePosition);
             spawnPosition.z = 0;
-            _earse.Begin(spawnPosition);
-            scratch.AssignScreenAsMask();
+            earses[_currentEarseIndex].Begin(spawnPosition);
+            _currentEarseIndex++;
         }
         else
         {
-            _earse.Stop();
-            Scratch.I.Stop();
+            foreach (var t in earses)
+            {
+                t.Stop();
+            }
+
+            _currentEarseIndex = 0;
         }
     }
 }
