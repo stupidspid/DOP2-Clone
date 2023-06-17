@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,13 +15,7 @@ public class LevelsController : MonoBehaviour
     private void OnEnable()
     {
         LevelRegister();
-        changeLevel.onClick.AddListener(() =>
-        {
-            LoopLevels();
-            Destroy(_currentLevel.gameObject);
-            _currentLevelIndex++;
-            SetupLevel(_currentLevelIndex);
-        });
+        changeLevel.onClick.AddListener(ChangeLevel);
     }
 
     private void LevelRegister()
@@ -49,5 +40,13 @@ public class LevelsController : MonoBehaviour
         {
             _currentLevelIndex = -1;
         }
+    }
+
+    private void ChangeLevel()
+    {
+        LoopLevels();
+        Destroy(_currentLevel.gameObject);
+        _currentLevelIndex++;
+        SetupLevel(_currentLevelIndex);
     }
 }
