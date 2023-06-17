@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InputController : MonoBehaviour
@@ -34,6 +35,7 @@ public class InputController : MonoBehaviour
         else
         {
             _earse.Stop();
+            Scratch.I.Stop();
         }
     }
 }

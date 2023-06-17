@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class EarseController : MonoBehaviour, IEarsable
 { 
-    [SerializeField] private LineRenderer lineRenderer; 
+    [SerializeField] private LineRenderer lineRenderer;
     
     public void Begin(Vector3 position)
     {
