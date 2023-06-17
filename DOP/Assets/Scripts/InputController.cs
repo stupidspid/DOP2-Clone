@@ -12,6 +12,12 @@ public class InputController : MonoBehaviour
     private Camera _camera;
     private EarseController _earse;
 
+    public Scratch Scratch
+    {
+        get { return scratch; }
+        set { scratch = value; }
+    }
+
     private void OnEnable()
     {
         _camera = Camera.main;
