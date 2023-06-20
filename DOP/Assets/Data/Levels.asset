@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: Levels
   m_EditorClassIdentifier: 
   levels:
-  - level: {fileID: 5107110044416920755, guid: 18a9754b0dcd8c84dba83b978dd90b2a, type: 3}
-    condition: "\u0420\u0430\u0441\u043A\u0440\u043E\u0439 \u043E\u0431\u043C\u0430\u043D"
+  - level: {fileID: 5107110044416920755, guid: 53cd42865a7cdf84d9d152b299818671, type: 3}
+    condition: "\u041F\u043E\u043C\u043E\u0433\u0438 \u0433\u0440\u0430\u0431\u0438\u0442\u0435\u043B\u044E"
+  - level: {fileID: 5107110044416920755, guid: 2acc362a6b2493e4c8d13eaab8a9adc0, type: 3}
+    condition: "\u0427\u0442\u043E \u0441\u043A\u0440\u044B\u0432\u0430\u0435\u0442
+      \u0431\u0430\u0439\u043A\u0435\u0440?"
   - level: {fileID: 5107110044416920755, guid: 987516683faa4bd4e8506fa7290fa247, type: 3}
     condition: "\u0420\u0435\u0448\u0438 \u043F\u0440\u0438\u043C\u0435\u0440"
-  - level: {fileID: 5107110044416920755, guid: 53cd42865a7cdf84d9d152b299818671, type: 3}
+  - level: {fileID: 5107110044416920755, guid: 18a9754b0dcd8c84dba83b978dd90b2a, type: 3}
+    condition: "\u0420\u0430\u0441\u043A\u0440\u043E\u0439 \u043E\u0431\u043C\u0430\u043D"
+  - level: {fileID: 5107110044416920755, guid: 31ba73980d0bff144bddd7e19e0be98d, type: 3}
     condition: "\u0412\u0435\u0440\u043D\u0438 \u043C\u0438\u0448\u043A\u0443 \u0434\u043E\u043C\u043E\u0439"

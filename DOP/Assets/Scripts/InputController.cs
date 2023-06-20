@@ -6,11 +6,13 @@ public class InputController : MonoBehaviour
     [SerializeField] private EarseController earse;
     [SerializeField] private int earsesAmount;
     [SerializeField] private Transform container;
+    [SerializeField] private float smoothSpeed = 10;
 
     private List<EarseController> earses = new List<EarseController>();
     private Camera _camera;
     private EarseController _earse;
     private int _currentEarseIndex;
+    private Vector3 currentVelocity;
 
     private void Start()
     {
@@ -33,7 +35,13 @@ public class InputController : MonoBehaviour
         {
             var spawnPosition = _camera.ScreenToWorldPoint(Input.mousePosition);
             spawnPosition.z = 0;
-            earses[_currentEarseIndex].Begin(spawnPosition);
+            var smoothPos = spawnPosition;
+            if (_currentEarseIndex > 0)
+            {
+                smoothPos = Vector3.SmoothDamp(earses[_currentEarseIndex-1].transform.position,
+                    spawnPosition, ref currentVelocity, Time.deltaTime * smoothSpeed);
+            }
+            earses[_currentEarseIndex].Begin(smoothPos);
             _currentEarseIndex++;
         }
         else
